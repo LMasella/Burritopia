@@ -1,0 +1,15 @@
+﻿@model Order
+@{
+    ViewData["Title"] = "New Order";
+}
+<div class="container p-4">
+    <h1 class="text-center">Burritopia</h1>
+    <h3 class="text-center">Name for New Order:</h3>
+    <form asp-action="CreateOrder" asp-controller="Order" method="post">
+        <input asp-for="Name" class="form-control" />
+        <span class="text-warning" asp-validation-for="Name"></span>
+        <div class="d-flex justify-content-center mt-4">
+            <button class="btn btn-primary">Start New Order</button>
+        </div>
+    </form>
+</div>

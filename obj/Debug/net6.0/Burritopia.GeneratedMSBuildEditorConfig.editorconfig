@@ -1,0 +1,76 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Burritopia
+build_property.RootNamespace = Burritopia
+build_property.ProjectDir = c:\Users\leifm\OneDrive\Desktop\CodingDojo\csharp\Project\Burritopia\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = c:\Users\leifm\OneDrive\Desktop\CodingDojo\csharp\Project\Burritopia
+build_property._RazorSourceGeneratorDebug = 
+
+[c:/Users/leifm/OneDrive/Desktop/CodingDojo/csharp/Project/Burritopia/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/leifm/OneDrive/Desktop/CodingDojo/csharp/Project/Burritopia/Views/Home/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/leifm/OneDrive/Desktop/CodingDojo/csharp/Project/Burritopia/Views/Ingredient/Admin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5ncmVkaWVudFxBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/leifm/OneDrive/Desktop/CodingDojo/csharp/Project/Burritopia/Views/Ingredient/NewAddOn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5ncmVkaWVudFxOZXdBZGRPbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/leifm/OneDrive/Desktop/CodingDojo/csharp/Project/Burritopia/Views/Ingredient/NewBeans.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5ncmVkaWVudFxOZXdCZWFucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/leifm/OneDrive/Desktop/CodingDojo/csharp/Project/Burritopia/Views/Ingredient/NewProtein.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5ncmVkaWVudFxOZXdQcm90ZWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/leifm/OneDrive/Desktop/CodingDojo/csharp/Project/Burritopia/Views/Ingredient/NewRice.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5ncmVkaWVudFxOZXdSaWNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/leifm/OneDrive/Desktop/CodingDojo/csharp/Project/Burritopia/Views/Order/Checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQ2hlY2tvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/leifm/OneDrive/Desktop/CodingDojo/csharp/Project/Burritopia/Views/Order/NewBurrito.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcTmV3QnVycml0by5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/leifm/OneDrive/Desktop/CodingDojo/csharp/Project/Burritopia/Views/Order/ViewOrders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcVmlld09yZGVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/leifm/OneDrive/Desktop/CodingDojo/csharp/Project/Burritopia/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/leifm/OneDrive/Desktop/CodingDojo/csharp/Project/Burritopia/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/leifm/OneDrive/Desktop/CodingDojo/csharp/Project/Burritopia/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/leifm/OneDrive/Desktop/CodingDojo/csharp/Project/Burritopia/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/leifm/OneDrive/Desktop/CodingDojo/csharp/Project/Burritopia/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

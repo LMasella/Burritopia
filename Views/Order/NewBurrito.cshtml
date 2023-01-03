@@ -1,0 +1,80 @@
+@model Burrito
+@{
+    ViewData["Title"] = "Build Your Burrito";
+}
+
+<div class="container card summary p-4">
+    <h1>Add Burrito:</h1>
+    <form asp-action="CreateBurrito" asp-controller="Order" method="post">
+        <input value='@Context.Session.GetInt32("OrderNumber")' type="hidden" asp-for="OrderId" />
+        <div class="mt-2">
+            <label asp-for="RiceId">Rice:</label>
+            <select asp-for="RiceId" class="form-select">
+            @foreach(Ingredient r in ViewBag.AllRice)
+            {
+                <option value="@r.IngredientId">@r.Name</option>
+            }
+            </select>
+        </div>
+        <div class="mt-2">
+            <label asp-for="BeansId">Beans:</label>
+            <select asp-for="BeansId" class="form-select">
+            @foreach(Ingredient r in ViewBag.AllBeans)
+            {
+                <option value="@r.IngredientId">@r.Name</option>
+            }
+            </select>
+        </div>
+        <div class="mt-2">
+            <label asp-for="ProteinId">Protein:</label>
+            <select onchange="handleDouble()" id="theProtein" asp-for="ProteinId" class="form-select">
+            @foreach(Protein r in ViewBag.AllProteins)
+            {
+                <option value="@r.IngredientId">@r.Name - $@r.Price.ToString("N2")</option>
+            }
+            </select>
+        </div>
+        <div class="mt-2">
+            <label>Double Meat?</label>
+            <div class="px-4">
+                <input type="radio" asp-for="DoubleMeat" id="dm-f" value="false" class="form-check-input" checked />
+                <label for="dm-f">No</label>
+                <input type="radio" asp-for="DoubleMeat" id="dm-t" value="true" class="form-check-input" />
+                <label for="dm-t">Yes</label>
+                <div id="dmprices" style="display: inline-block;">
+                @foreach(Protein r in ViewBag.AllProteins)
+                {
+                    <span id="DoublePrice-@r.IngredientId" style="display: none;">- $@r.DoubleMeatPrice.ToString("N2")</span>
+                }
+                </div>
+            </div>
+        </div>
+            <label>Add Ons:</label>
+            @foreach(Ingredient r in ViewBag.AllAddOns)
+            {
+                <div class="mt-2 form-check">
+                    <input type="checkbox" id="AddOn-@r.IngredientId" name="AddOns" value="@r.IngredientId" class="form-check-input">
+                    @if(r.Price == 0)
+                    {
+                        <label class="form-check-label" for="AddOn-@r.IngredientId">@r.Name</label>
+                    } else {
+                        <label class="form-check-label" for="AddOn-@r.IngredientId">@r.Name - $@r.Price.ToString("N2")</label>
+                    }
+                </div>
+            }
+        <div class="d-flex justify-content-center mt-4">
+            <button class="btn btn-primary">Add Burrito to Order</button>
+        </div>
+    </form>
+</div>
+<script>
+    window.onload = handleDouble();
+    function handleDouble() {
+        const protId = document.getElementById("theProtein").value;
+        const dmprices = document.getElementById("dmprices");
+        for (let i = 0; i < dmprices.children.length; i++) {
+            dmprices.children[i].style.display = "none";
+        }
+        document.getElementById(`DoublePrice-${protId}`).style.display = "inline";
+    }
+</script>

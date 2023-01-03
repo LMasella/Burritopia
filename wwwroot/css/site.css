@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  color: #132a13;
+  background-color: #31572c;
+}
+
+.wrappedcolumns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-height: 70vh;
+  gap: .75rem;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+}
+
+.wrappedcolumns * {
+  writing-mode: horizontal-tb;
+}
+
+.nobeans, .norice {
+  text-decoration: line-through;
+  color: red;
+}
+.order {
+  background-color: #4f772d;
+}
+.burrito {
+  background-color: #90a955;
+}
+.burrito .card-body {
+  padding: 0 1.5rem 0 1rem;
+}
+.card ul {
+  list-style: none;
+}
+.card {
+  border-color: black;
+}
+.order li {
+  border: solid black 1px;
+  border-radius: 5px;
+  padding: 3px 10px;
+  font-weight: bold;
+  font-size: large;
+  margin-top: .25rem;
+}
+.blackbeans {
+  background-color: black;
+  color: white;
+}
+.pintobeans {
+  background-color: maroon;
+  color: white;
+
+}
+.whiterice {
+  background-color: white;
+  color: black;
+}
+.brownrice {
+  background-color: rgb(51, 16, 16);
+  color: white;
+}
+.chicken {
+  background-color:yellow;
+}
+.steak {
+  background-color: slategray;
+}
+.barbacoa {
+  background-color: blueviolet;
+  color: white;
+}
+.carnitas {
+  background-color: orange;
+}
+.sofritas {
+  background-color: coral;
+}
+.veggie {
+  background-color: bisque;
+}
+.doublemeat {
+  text-decoration: underline;
+  color:red;
+  background-color: white;
+}
+.guacamole {
+  background-color: darkgreen;
+  color: white;
+}
+.picodegallo {
+  background-color:orangered;
+}
+.cornsalsa {
+  background-color:goldenrod
+}
+.mediumsalsa {
+  background-color: olive;
+}
+.hotsalsa {
+  background-color:mediumvioletred;
+}
+.sourcream {
+  background-color: beige;
+}
+.veggies {
+  background-color: darkmagenta;
+  color: white;
+}
+.cheese {
+  background-color: rgb(164, 211, 253);
+}
+.lettuce {
+  background-color: greenyellow;
+}
+.queso {
+  background-color: peru;
+}
+.card hr {
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+  margin-left: -1rem;
+}
+
+.complete {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0,0,0,.6);
+  position: absolute;
+}
+
+.check {
+  margin: auto;
+  height: 80px;
+  width: 80px;
+  background-color: rgba(19, 154, 26, 0.9);
+  border: solid black 1px;
+  border-radius: 50%;
+}
+
+.summary {
+  background-color:#8eada9;
+}

@@ -1,0 +1,49 @@
+@model Order
+
+<div class="container card mt-3 p-3 summary">
+    <h1>Order "@Model.Name" Summary</h1>
+    <hr />
+    @{
+        int i = 0;
+        foreach(Burrito Burrito in Model.Burritos)
+        {
+            i++;
+            <div class="d-flex justify-content-evenly">
+                <div>
+                    <h2>Burrito #@i - @Burrito.Protein?.Name - $@Burrito.Protein?.Price.ToString("N2")</h2>
+                    @if(Burrito.DoubleMeat == true)
+                    {
+                        <h4>Double Meat! - $@Burrito.Protein?.DoubleMeatPrice.ToString("N2")</h4>
+                    }
+                    <ul>
+                        <li>@Burrito.Rice?.Name</li>
+                        <li>@Burrito.Beans?.Name</li>
+                        @foreach(Topping t in Burrito.Toppings)
+                        {
+                            @if(t.AddOn.Price == 0)
+                            {
+                                <li>@t.AddOn.Name</li>
+                            } else {
+                                <li class="fw-bold">@t.AddOn.Name - $@t.AddOn.Price.ToString("N2")</li>
+                            }
+                        }
+                    </ul>
+                </div>
+                <h2>$@Burrito.Price.ToString("N2")</h2>
+            </div>
+        }
+    }
+    <hr />
+    <div class="d-flex justify-content-end gap-5">
+        <h2>Total:</h2>
+        <h2>$@Model.Total.ToString("N2")</h2>
+    </div>
+    <div class="d-flex justify-content-end">
+        <div class="mt-3">
+            <a href="/burritos/new" class="btn btn-warning">Add Another Burrito</a>
+            <form asp-action="PlaceOrder" asp-controller="Order" asp-route-id="@Model.OrderId" method="post">
+                <button class="btn btn-primary mt-4">Checkout</button>
+            </form>
+        </div>
+    </div>
+</div>

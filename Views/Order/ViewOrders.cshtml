@@ -1,0 +1,81 @@
+@model List<Order>
+@{
+    ViewData["Title"] = "Orders";
+}
+<div class="px-5 py-4 d-flex gap-4">
+    @foreach(Order Order in Model)
+    {
+        <div class="card shadow order">
+            <div class="card-body">
+                <h3>Order #@Order.OrderId - @Order.UpdatedAt.ToString("t")</h3>
+                <div class="wrappedcolumns">
+                    @{
+                        int i = 1;
+                    }
+                        @foreach(Burrito Burrito in Order.Burritos)
+                        {
+                            <div class="card shadow burrito" onclick="handleComplete(this)">
+                                <div class="complete d-flex align-items-center justify-content-center" style="visibility: hidden">
+                                    <svg height="100" width="100">
+                                        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="green" />
+                                        <polyline points="30,49 45,62 70,32" style="fill:none;stroke:white;stroke-width:8" />
+                                    </svg>
+                                </div>
+                                <div class="card-body">
+                                    <h2>Burrito #@i</h2>
+                                    @{
+                                        i++;
+                                    }
+                                    <ul>
+                                        <li class="@Burrito.Rice?.ToClass()">@Burrito.Rice?.Name</li>
+                                        <hr />
+                                        <li class="@Burrito.Beans?.ToClass()">@Burrito.Beans?.Name</li>
+                                        <hr />
+                                        <li class="@Burrito.Protein?.ToClass()">@Burrito.Protein?.Name</li>
+                                        @if(Burrito.DoubleMeat == true)
+                                        {
+                                            <li class="doublemeat">DOUBLE MEAT</li>
+                                        }
+                                        <hr />
+                                        @foreach(Topping Topping in Burrito.Toppings)
+                                        {
+                                            <li class="@Topping.AddOn?.ToClass()">@Topping.AddOn?.Name</li>
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                            }
+                </div>
+                <form style="visibility: hidden;" asp-action="CompleteOrder" asp-controller="Order" asp-route-id="@Order.OrderId" method="post">
+                    <div class="d-flex justify-content-center mt-5">
+                        <button class="btn btn-primary w-100 p-5" style="font-size: 2em;">BUMP IT</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    }
+</div>
+<script>
+    function handleComplete(ele) {
+        // If the burrito is un-checked, check it; and vice-versa
+        if (ele.firstElementChild.style.visibility == "visible") {
+            ele.firstElementChild.style.visibility = "hidden";
+        } else {
+            ele.firstElementChild.style.visibility = "visible";
+        }
+
+        // check if all burritos in the order are checked -- if so, show the BUMP button
+        let showButton = true;
+        for (let i = 0; i < ele.parentElement.children.length; i++) {
+            if (ele.parentElement.children[i].firstElementChild.style.visibility == "hidden") {
+                showButton = false;
+                break;
+            }
+        }
+        if (showButton == true) {
+            ele.parentElement.parentElement.lastElementChild.style.visibility = "visible";
+        } else {
+            ele.parentElement.parentElement.lastElementChild.style.visibility = "hidden";
+        }
+    }
+</script>
